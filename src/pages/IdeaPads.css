@@ -199,10 +199,6 @@ h1 {
     margin-bottom: 12px;
 }
 
-.assistant-message {
-    /* existing styles for parsed-content-section and response-section will apply here */
-}
-
 .error-message {
     background: #fee;
     color: #c00;

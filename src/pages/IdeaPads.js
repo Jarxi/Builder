@@ -110,7 +110,6 @@ const IdeaPads = () => {
     const selectedText = selection.toString().trim();
     if (selectedText) {
       setSelectedText(selectedText);
-      setMessage(selectedText);
       setSelectionPosition({
         x: event.clientX,
         y: event.clientY + 10
@@ -128,6 +127,7 @@ const IdeaPads = () => {
             ...messages,
             { role: 'user', content: "Follow up question: " + selectedText }
           ]);
+        console.log(' selectedText', selectedText);
       const response = await fetch('http://localhost:5001/api/followup', {
         method: 'POST',
         headers: {
@@ -139,6 +139,7 @@ const IdeaPads = () => {
       
       // Add new message and response to messages array
       const data = await response.json();
+      console.log("data from selectedText", data);
       if (data.content && data.content.length > 0) {
         setMessages([
             ...messages,
@@ -263,8 +264,8 @@ const IdeaPads = () => {
         >
           <textarea 
             className="selection-input"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={selectedText}
+            onChange={(e) => setSelectedText(e.target.value)}
             rows={2}
           />
           <div className="input-controls">

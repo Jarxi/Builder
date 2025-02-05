@@ -1,0 +1,425 @@
+.build-guides-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    background-color: transparent;
+}
+
+.change-idea-btn {
+    background-color: white;
+    border: 1px solid #0040ff;
+    color: #0040ff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.editor-section {
+    background-color: #f8f9fc;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.guide-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.difficulty-badge {
+    background-color: #e8e5ff;
+    color: #5b43ff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.guide-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    color: #0040ff;
+}
+
+.arrow {
+    font-size: 1.25rem;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fc;
+    border-right: 1px solid #e5e7eb;
+    padding: 2rem 0;
+    margin-right: 2rem;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: #4b5563;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background-color 0.2s, color 0.2s;
+    border-radius: 4px;
+    width: calc(100% - 1rem);
+}
+
+.sidebar-link:hover {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+
+.sidebar-link.active {
+    background-color: #e8e5ff;
+    color: #5b43ff;
+    font-weight: 500;
+}
+
+.main-content {
+    flex: 1;
+    background-color: white;
+}
+
+.sidebar-header {
+    padding: 0 1.5rem 2rem;
+    white-space: nowrap;
+    width: 250px;
+}
+
+.start-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #5b43ff;
+}
+
+.find-engineers-section {
+    margin: 1.5rem 0 2rem;
+}
+
+.find-engineers-btn {
+    background-color: #5b43ff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.find-engineers-btn:hover {
+    background-color: #4935cc;
+}
+
+.featured-engineers-section {
+    margin-bottom: 2rem;
+    background-color: #fff5f2;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.featured-header {
+    margin-bottom: 1.5rem;
+}
+
+.featured-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.featured-title h2 {
+    margin-right: auto;
+}
+
+.trophy-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.refresh-btn {
+    background: transparent;
+    border: 1px solid #5b43ff;
+    color: #5b43ff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: all 0.2s;
+}
+
+.refresh-btn:hover {
+    background: #5b43ff;
+    color: white;
+}
+
+.engineers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.engineer-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.engineer-image {
+    position: relative;
+    height: 200px;
+}
+
+.engineer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.engineer-info {
+    padding: 1rem;
+}
+
+.engineer-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.badge.rising-talent {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge.experienced-pro {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.badge.elite-expert {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.75rem 0;
+}
+
+.stars {
+    color: #ff9900;
+}
+
+.reviews {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.price {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.features {
+    color: #666;
+    font-size: 0.875rem;
+}
+
+.match-reasons {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.match-reason {
+    color: #2e7d32;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.match-icon {
+    color: #2e7d32;
+    font-size: 1.25rem;
+}
+
+.idea-pads-layout {
+    display: flex;
+    gap: 2rem;
+    height: calc(100vh - 150px);
+}
+
+.guides-list {
+    width: 300px;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+.guide-item {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #e5e7eb;
+}
+
+.guide-item:hover {
+    background-color: #f8f9fc;
+}
+
+.guide-item.active {
+    background-color: #e8e5ff;
+    border-color: #5b43ff;
+}
+
+.guide-item h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.guide-item p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.input-area {
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-header {
+    margin-bottom: 1.5rem;
+}
+
+.input-header h2 {
+    margin: 0 0 0.5rem 0;
+}
+
+.input-header p {
+    margin: 0;
+    color: #6b7280;
+}
+
+.input-content {
+    flex: 1;
+}
+
+.input-content textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    resize: none;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.input-content textarea:focus {
+    outline: none;
+    border-color: #5b43ff;
+}
+
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+.sidebar-section {
+    margin-bottom: 2.5rem;
+}
+
+.section-title {
+    display: block;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}

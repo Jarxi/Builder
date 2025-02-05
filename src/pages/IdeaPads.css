@@ -1,0 +1,218 @@
+.ideapads-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    color: #111;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #666;
+}
+
+.input-section {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.main-input {
+    width: 100%;
+    min-height: 100px;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 18px;
+    resize: none;
+    padding: 10px;
+}
+
+.main-input:focus {
+    outline: none;
+}
+
+.input-controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.left-controls,
+.right-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.control-btn {
+    background: transparent;
+    border: none;
+    color: #666;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.control-btn:hover {
+    background: #eee;
+}
+
+.control-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.suggestions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.suggestion-btn {
+    background: white;
+    border: 1px solid #e0e0e0;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.suggestion-btn:hover {
+    background: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.response-section {
+    margin-top: 24px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.loading {
+    color: #666;
+    text-align: center;
+    padding: 20px;
+}
+
+.response-content h3 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.response-text {
+    white-space: pre-wrap;
+    line-height: 1.5;
+    color: #333;
+}
+
+.selection-input-section {
+    position: fixed;
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    z-index: 10;
+    transform: translate(-50%, 0);
+}
+
+.parsed-content-section {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 12px;
+    text-align: left;
+    position: relative;
+    /* Added to contain absolute positioned child */
+}
+
+.selection-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #333;
+    font-size: 16px;
+    resize: none;
+    padding: 8px;
+    font-family: inherit;
+}
+
+.selection-input:focus {
+    outline: none;
+}
+
+.selection-input-section .input-controls {
+    padding-top: 8px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 8px;
+}
+
+.selection-input-section .control-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.parsed-content {
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-x: auto;
+    color: #333;
+    text-align: left;
+}
+
+.message {
+    margin: 20px 0;
+}
+
+.user-message {
+    background: #f5f5f5;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.assistant-message {
+    /* existing styles for parsed-content-section and response-section will apply here */
+}
+
+.error-message {
+    background: #fee;
+    color: #c00;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.loading {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}

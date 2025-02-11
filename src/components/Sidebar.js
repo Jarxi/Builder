@@ -1,51 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import './Sidebar.css';
 
 const Sidebar = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className="sidebar">
-      <div className="sidebar-header">
+    <div 
+      className="topnav"
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+    >
+      <div className="topnav-trigger">
         <span className="start-text">Start</span>
       </div>
-      <nav className="sidebar-nav">
+      <nav className={`topnav-content ${isVisible ? 'visible' : ''}`}>
         <ul>
-          <div className="sidebar-section">
+          <div className="nav-section">
             <span className="section-title">Idea station</span>
             <li>
               <Link 
                 to="/idea-pads" 
-                className={`sidebar-link ${currentPath === '/idea-pads' ? 'active' : ''}`}
+                className={`nav-link ${currentPath === '/idea-pads' ? 'active' : ''}`}
               >
                 <span className="nav-icon">📝</span>
                 Idea Pads
               </Link>
             </li>
           </div>
-          <div className="sidebar-section">
+          <div className="nav-section">
             <span className="section-title">Ready to build</span>
             <li>
               <Link 
                 to="/build-product" 
-                className={`sidebar-link ${currentPath === '/build-product' ? 'active' : ''}`}
+                className={`nav-link ${currentPath === '/build-product' ? 'active' : ''}`}
               >
                 <span className="nav-icon">🛠️</span>
                 Build it
               </Link>
             </li>
             <li>
-              <a href="#" className="sidebar-link">
+              <a href="#" className="nav-link">
                 <span className="nav-icon">🚀</span>
                 Deploy it
               </a>
             </li>
           </div>
-          <div className="sidebar-section">
+          <div className="nav-section">
             <span className="section-title">Go to market</span>
             <li>
-              <a href="#" className="sidebar-link">
+              <a href="#" className="nav-link">
                 <span className="nav-icon">📈</span>
                 Market it
               </a>

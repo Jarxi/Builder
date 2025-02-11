@@ -24,7 +24,6 @@ app.post('/api/followup', async (req, res) => {
       const { messages } = req.body;
   
       let systemMessage = "You are a startup expert and you are helping the user to start a business.";
-      systemMessage += "Ignore json the format. Just answer the follow up question based on user's business idea.";
   
       const response = await anthropic.messages.create({
         model: "claude-3-5-sonnet-20241022",
@@ -45,7 +44,8 @@ app.post('/api/chat', async (req, res) => {
     const { messages } = req.body;
 
     let systemMessage = "You are a startup expert and you are helping the user to start a business.";
-
+    let userMessage = "Elaborate the user's business idea into a detailed business plan with less than 80 words: " + messages[messages.length - 1].content;
+    
     const response = await anthropic.messages.create({
       model: "claude-3-5-sonnet-20241022",
       system: systemMessage,

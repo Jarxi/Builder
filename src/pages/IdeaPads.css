@@ -1,10 +1,53 @@
 .ideapads-container {
-    max-width: 800px;
-    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 80px);
+    width: calc(100% - 40px);
     padding: 20px;
-    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.messages-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.chatbox-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: white;
-    color: #111;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: calc(100% - 40px);
+}
+
+.input-section {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    width: calc(100% - 40px);
+    margin: 0 auto;
 }
 
 .header {
@@ -20,14 +63,6 @@ h1 {
 .subtitle {
     font-size: 20px;
     color: #666;
-}
-
-.input-section {
-    background: #f5f5f5;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 24px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .main-input {
@@ -84,6 +119,7 @@ h1 {
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 8px;
 }
 
 .suggestion-btn {
@@ -147,7 +183,6 @@ h1 {
     border-radius: 12px;
     text-align: left;
     position: relative;
-    /* Added to contain absolute positioned child */
 }
 
 .selection-input {
